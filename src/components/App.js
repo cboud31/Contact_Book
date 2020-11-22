@@ -7,8 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { fetchAPI, BASE_URL } from "../api";
-import { CreateContact, ContactList, CommentList } from "../components";
-import EditContact from "./EditContact";
+import { CreateContact, ContactList } from "../components";
 
 const App = () => {
   const [contactList, setContactList] = useState([]);

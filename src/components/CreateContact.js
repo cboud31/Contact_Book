@@ -47,13 +47,13 @@ const CreateContact = (props) => {
   };
 
   return (
-    <div id="ContactForm">
+    <div id="CreateContact">
       <form
         className="form"
         style={{ border: "1px solid black" }}
         onSubmit={handleSubmit}
       >
-        <h2>Create Contact:</h2>
+        <h3>Create New Contact:</h3>
         <p>
           Name:
           <input
@@ -98,6 +98,7 @@ const CreateContact = (props) => {
           Contact:
           <select
             className="contact-type"
+            style={{ width: "100%" }}
             value={contactType}
             onChange={(e) => setContactType(e.target.value)}
           >
