@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import { CreateContact, ContactList } from "../components";
 
@@ -24,7 +23,7 @@ const EditContact = (props) => {
   };
 
   return (
-    <div className="EditContact">
+    <div id="EditContact">
       {/* <h1>MAKE A FORM FOR EDIT CONTACT, PASS IN editContact as a prop</h1> */}
       <form
         className="form"
@@ -37,6 +36,7 @@ const EditContact = (props) => {
           <input
             type="text"
             placeholder="Name"
+            style={{ width: "100%" }}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -46,6 +46,7 @@ const EditContact = (props) => {
           <input
             type="text"
             placeholder="Address"
+            style={{ width: "100%" }}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           />
@@ -55,6 +56,7 @@ const EditContact = (props) => {
           <input
             type="text"
             placeholder="(123) 456-7890"
+            style={{ width: "100%" }}
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
@@ -64,6 +66,7 @@ const EditContact = (props) => {
           <input
             type="text"
             placeholder="Email"
+            style={{ width: "100%" }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -81,17 +84,18 @@ const EditContact = (props) => {
           </select>
         </p>
         {/* make a conditional that toggles btw button & p/w requirements? */}
-        <button id="formSubmit">SUBMIT</button>
+        <button id="formSubmit">UPDATE</button>
 
-        <Link>
+        
           <button
-            onClick={<CreateContact />}
-            // onClick=routes back to <CreateContact />
-            // React Router!!
+            style={{ width: "100%" }}
+            onClick={(event) => {
+              event.preventDefault();
+              setEditContact(false)}}
           >
             CANCEL
           </button>
-        </Link>
+        
       </form>
     </div>
   );

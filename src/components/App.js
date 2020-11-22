@@ -42,10 +42,12 @@ const App = () => {
   }
 
   return (
-    <Router>
     <div id="App">
       {editContact ? (
-        <EditContact />
+        <EditContact
+          contactList={contactList}
+          editContact={editContact}
+          setEditContact={setEditContact} />
       ) : (
         // <Route path="/createcontact">
         <CreateContact
@@ -58,12 +60,11 @@ const App = () => {
       <ContactList
         contactList={contactList}
         // setContactList={ setContactList }
-        // setEditContact={setEditContact}
+        setEditContact={setEditContact}
         // setContactList={setContactList}
-        // deleteFromContactList={deleteFromContactList}
+        deleteFromContactList={deleteFromContactList}
       />
     </div>
-    </Router>
   );
 };
 

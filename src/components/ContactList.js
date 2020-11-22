@@ -3,7 +3,7 @@ import { fetchAPI, BASE_URL } from "../api";
 import { CommentList } from "../components";
 
 const ContactList = (props) => {
-  const { contactList, setContactList, deleteFromContactList, setEditContact } = props;
+  const { contactList, setContactList, deleteFromContactList, editContact, setEditContact } = props;
 
   const handleDelete = async (contact) => {
     fetchAPI(`${BASE_URL}/contacts/${contact.id}`, "DELETE")
