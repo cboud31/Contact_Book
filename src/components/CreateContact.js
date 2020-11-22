@@ -48,17 +48,18 @@ const CreateContact = (props) => {
 
   return (
     <div id="ContactForm">
-      
       <form
         className="form"
         style={{ border: "1px solid black" }}
         onSubmit={handleSubmit}
-      ><h2>Create Contact:</h2>
+      >
+        <h2>Create Contact:</h2>
         <p>
           Name:
           <input
             type="text"
             placeholder="Name"
+            style={{ width: "100%" }}
             value={name}
             onChange={handleName}
           />
@@ -68,6 +69,7 @@ const CreateContact = (props) => {
           <input
             type="text"
             placeholder="Address"
+            style={{ width: "100%" }}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           />
@@ -77,6 +79,7 @@ const CreateContact = (props) => {
           <input
             type="text"
             placeholder="(123) 456-7890"
+            style={{ width: "100%" }}
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
@@ -86,6 +89,7 @@ const CreateContact = (props) => {
           <input
             type="text"
             placeholder="Email"
+            style={{ width: "100%" }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

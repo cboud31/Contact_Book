@@ -27,24 +27,6 @@ const CommentList = (props) => {
 
   return (
     <div className="Comments">
-    <h4>Leave a comment about {name}:</h4>
-    <form
-      className="createComment"
-      // onSubmit={addCommentToContact}
-    >
-      <input type="text" placeholder="Leave a comment..."
-      value={content}
-      onChange={(event) => setContent(event.target.value)} />
-      <button>
-        {/*fetchAPI for edit post, re-render comments array*/}
-        SUBMIT
-      </button>
-    </form>
-    {comments.length === 0
-      ? null
-      : comments.map((comment, idx) => {
-          return <h5 key={idx}>{comment.content}</h5>;
-        })}
   </div>
 
   )
@@ -84,3 +66,24 @@ export default CommentList;
     })}
   </div>
   */
+
+/*
+ <h4>Leave a comment about {name}:</h4>
+ <form
+   className="createComment"
+   // onSubmit={addCommentToContact}
+ >
+   <input type="text" placeholder="Leave a comment..."
+   value={content}
+   onChange={(event) => setContent(event.target.value)} />
+   <button>
+     {fetchAPI for edit post, re-render comments array}
+     SUBMIT
+   </button>
+ </form>
+ {comments.length === 0
+   ? null
+   : comments.map((comment, idx) => {
+       return <h5 key={idx}>{comment.content}</h5>;
+     })}
+    */

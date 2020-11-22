@@ -57,10 +57,10 @@ const App = () => {
       )}
       <ContactList
         contactList={contactList}
-        setContactList={ setContactList }
-        setEditContact={setEditContact}
-        setContactList={setContactList}
-        deleteFromContactList={deleteFromContactList}
+        // setContactList={ setContactList }
+        // setEditContact={setEditContact}
+        // setContactList={setContactList}
+        // deleteFromContactList={deleteFromContactList}
       />
     </div>
     </Router>
