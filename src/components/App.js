@@ -12,6 +12,7 @@ import { CreateContact, ContactList, EditContact } from "../components";
 const App = () => {
   const [contactList, setContactList] = useState([]);
   const [editContact, setEditContact] = useState(null);
+  
 
   useEffect(() => {
     fetchAPI(`${BASE_URL}/contacts`)

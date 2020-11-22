@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { fetchAPI, BASE_URL } from "../api";
 import { CommentList } from "../components";
 import CreateComment from "./CreateComment";
 
 const ContactList = (props) => {
+  const [commentList, setCommentList] = useState([]);
   const { contactList, setContactList, deleteFromContactList, editContact, setEditContact } = props;
 
   const handleDelete = async (contact) => {
@@ -64,7 +65,9 @@ const ContactList = (props) => {
               
             
               <CreateComment 
-                contact={contact}/>
+                contact={contact}
+                commentList={commentList}
+                setCommentList={setCommentList}/>
               <CommentList
                 contact={ contact }
                 contactList={contactList}
