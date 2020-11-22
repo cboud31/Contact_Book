@@ -26,7 +26,12 @@ const CommentList = (props) => {
   };
 
   return (
-    <div className="Comments">
+    <div className="CommentList">
+      {comments.length === undefined
+      ? null 
+      : comments.map((comment, idx) => {
+        return <h5 key={idx}>{comment.content}</h5>
+      })}
   </div>
 
   )

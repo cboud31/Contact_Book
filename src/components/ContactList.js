@@ -1,6 +1,7 @@
 import React from "react";
 import { fetchAPI, BASE_URL } from "../api";
 import { CommentList } from "../components";
+import CreateComment from "./CreateComment";
 
 const ContactList = (props) => {
   const { contactList, setContactList, deleteFromContactList, editContact, setEditContact } = props;
@@ -60,9 +61,10 @@ const ContactList = (props) => {
                 DELETE
               </button>
               <button onClick={() => setEditContact(contact)}>EDIT</button>
-              <button>COMMENT</button>
-            
               
+            
+              <CreateComment 
+                contact={contact}/>
               <CommentList
                 contact={ contact }
                 contactList={contactList}
